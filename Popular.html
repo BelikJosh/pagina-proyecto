@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Configuración del documento -->
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Vista adaptable a dispositivos móviles -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo de estilos -->
+    <link rel="icon" type="image/png" href="Imagenes/Logo.png"> <!-- Enlace al icono de la pestaña del navegador -->
+    <title>SoftPack - Mochilas</title> <!-- Título de la pestaña del navegador -->
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <!-- Logo de la empresa -->
+        <div class="logo">
+            <img src="Imagenes/Logo.png" > <p> SoftPack</p>
+        </div>
+        
+        <!-- Barra de búsqueda -->
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <button type="submit">
+                <!-- Agrega el código del logotipo, puedes usar la etiqueta <img> o cualquier otra forma -->
+                <img src="Imagenes/magnifier.png" alt="Buscar">
+            </button>
+        </div>
+
+         <!-- Menú de navegación -->
+     <nav>
+        <ul>
+            <li><a href="#" onclick="cargarInicio()">Inicio</a></li>
+            <li class="dropdown">
+                <a class="dropbtn" href="#">
+                    <span class="arrow-down">&#9660;</span> Productos
+                </a>
+                <div class="dropdown-content">
+                    <a href="Accesorios.html">Accesorios</a>
+                    <a href="Mochilas.html">Mochilas</a>
+                    <a href="Popular.html">Lo más Vendido</a>
+                </div>
+            </li>
+            <li><a href="Ofertas.html">Ofertas</a></li>
+            <li><a href="Usuarios.html">Crear Cuenta</a></li>
+            <li><a href="Pagos.html">Métodos de Pago</a></li>
+            <li id="carritoIcono">
+                <img src="Imagenes/shopping-cart.png">
+            </li>                 
+        </ul>
+    </nav>
+    </header>
+        <!-- Contenedor Central -->
+        <div id="contenidoInicio">
+            <div class="productos-container">
+                <div class="producto">
+                    <img src="Imagenes/Mochila1.jpg" alt="Mochila 1">
+                    <h3>Mochila 1</h3>
+                    <p>Descripción de la mochila 1.</p>
+                    <p>Precio: $XX.XX</p>
+                    <p>Tiempo de envío: X días</p>
+                    <button onclick="añadirAlCarrito('Mochila 1', XX.XX, X)">Añadir al Carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="Imagenes/Set1.jpg" alt="Paquete pines 1">
+                    <h3>Paquete pines 1</h3>
+                    <p>Descripción Paquete pines 1.</p>
+                    <p>Precio: $XX.XX</p>
+                    <p>Tiempo de envío: X días</p>
+                    <button onclick="añadirAlCarrito('Paquete pines 1', XX.XX, X)">Añadir al Carrito</button>
+                </div>
+
+                <div class="producto">
+                    <img src="Imagenes/Set2.jpg" alt="Paquete pines 2">
+                    <h3>Paquete pines 2</h3>
+                    <p>Descripción Paquete pines 2.</p>
+                    <p>Precio: $YY.YY</p>
+                    <p>Tiempo de envío: Y días</p>
+                    <button onclick="añadirAlCarrito('Paquete pines 2', YY.YY, Y)">Añadir al Carrito</button>
+                </div>
+                
+                <!-- Puedes agregar más productos aquí -->
+            </div>
+
+            <!-- Contenedor de la ventana emergente del carrito -->
+            <div id="carritoContenedor" class="carrito-contenedor">
+                <!-- Botón para cerrar la ventana emergente -->
+                <button id="cerrarCarritoBtn">Cerrar Carrito</button>
+                <!-- Lista de productos en el carrito -->
+                <div id="listaCarrito"></div>
+                <!-- Botón para pagar ahora -->
+                <button id="pagarAhoraBtn" onclick="pagarAhora()">Pagar ahora</button>
+            </div>
+        </div>
+
+
+
+        <footer>
+            <!-- Redes sociales -->
+            <div class="redes-sociales">
+                <h2>Contactanos</h2> <!-- Título "Contactanos" -->
+                <a href="https://www.youtube.com" target="_blank"><img src="Imagenes/youtube.png" alt="YouTube"> YouTube</a>
+                <br>
+                <a href="https://www.facebook.com" target="_blank"><img src="Imagenes/facebook.png" alt="Facebook"> Facebook</a>
+                <br>
+                <a href="https://wa.me/" target="_blank"><img src="Imagenes/whatsapp.png" alt="WhatsApp"> WhatsApp </a>
+            </div>
+            
+            <!-- Información de contacto y políticas -->
+            <div class="informacion">
+                <div class="localizacion">
+                    <p>Localízanos en: Aguascalientes, Aguascalientes</p>
+                </div>
+                <div class="politicas">
+                    <p><a href="#" onclick="mostrarPoliticasReembolso()">Políticas de Reembolso</a></p>
+                </div>
+                <!-- Contenedor para mostrar las políticas de reembolso -->
+                <div id="politicasReembolso" style="display: none;">
+                    <!-- Contenido de las políticas de reembolso se mostrará aquí -->
+                </div>
+                <div class="metodos-pago"> <!-- Nuevo enlace agregado -->
+                    <p><a href="#" onclick="mostrarMetodosPago()">Métodos de Pago</a></p>
+                </div>
+                <div class="quienes-somos">
+                    <p><a href="#" onclick="mostrarQuienesSomos()">Quiénes Somos</a></p>
+                </div>
+                <div class="impacto-ambiental">
+                    <p><a href="#" onclick="mostrarImpactoAmbiental()">Nuestro Impacto Ambiental</a></p>
+                </div>
+                <div id="metodosPago" style="display: none;"> 
+                    
+                </div>
+            </div>
+        </footer>
+    
+        <script src="script.js"></script>
+    
+        <script>
+            function redirigirAMedioPago(medioPago) {
+                // Lógica para redirigir a la página de pago según el medio de pago seleccionado
+                if (medioPago === 'PayPal') {
+                    window.location.href = 'https://www.paypal.com';
+                } else if (medioPago === 'MercadoPago') {
+                    window.location.href = 'https://www.mercadopago.com';
+                } else {
+                    // Puedes agregar lógica para otros medios de pago aquí
+                    alert('Medio de pago no reconocido');
+                }
+            }
+    
+            function mostrarMetodosPago() {
+                // Redirigir a la página de métodos de pago
+                window.location.href = 'Pagos.html';
+            }
+        </script>
+
+    <script src="script.js"></script>
+</body>
+</html>

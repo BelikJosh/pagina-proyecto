@@ -1,0 +1,589 @@
+body {
+    /* Estilos generales del cuerpo de la página */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para el encabezado */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para el logo y texto */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 50px; /* Ajusta la altura según sea necesario */
+    margin-right: 10px; /* Ajusta el margen derecho entre el logo y el texto según sea necesario */
+}
+
+.logo p {
+    margin: 0; /* Elimina el margen predeterminado del párrafo */
+}
+
+/* Estilos para la barra de búsqueda */
+.search-bar input {
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+    font-size: 16px; /* Ajusta el tamaño de fuente según sea necesario */
+    border: none;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+    cursor: pointer;
+}
+
+.search-bar button img {
+    max-width: 20px; /* Ajusta el tamaño máximo del logotipo según sea necesario */
+    max-height: 20px; /* Ajusta el tamaño máximo del logotipo según sea necesario */
+}
+
+nav ul {
+    /* Estilos para el menú de navegación */
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    display: inline-block;
+}
+
+.dropbtn {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Otros estilos del menú de navegación */
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos para las redes sociales */
+.redes-sociales {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.redes-sociales h2 {
+    margin-bottom: 10px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.redes-sociales a {
+    margin: 5px 0; /* Agrega margen arriba y abajo para separar los elementos */
+    display: flex; /* Para que los íconos y el texto estén en línea */
+    align-items: center; /* Centra verticalmente los elementos */
+    text-decoration: none;
+    color: #fff;
+}
+
+.redes-sociales a img {
+    max-width: 40px; /* Ajusta el tamaño máximo de los iconos según sea necesario */
+    margin-right: 5px; /* Ajusta el margen derecho entre el icono y el texto según sea necesario */
+}
+
+/* Estilos para el contenido de la página */
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px; /* Ajusta el relleno según sea necesario */
+}
+
+/* Estilos para los recuadros */
+.box {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: left; /* Ajusta el texto a la izquierda */
+    width: 250px; /* Ajusta el ancho según sea necesario */
+    height: 300px;
+    margin: 10px; /* Ajusta el margen según sea necesario */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto del elemento */
+}
+
+/* Estilos para los textos dentro de los recuadros */
+.box p {
+    margin: 0;
+    font-size: 14px; /* Ajusta el tamaño de la letra según sea necesario */
+}
+
+
+/* Estilos para el nuevo div del carrusel */
+.carousel-container {
+    width: 60%; /* Ajusta el ancho del contenedor del carrusel según sea necesario */
+    margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+    overflow: hidden;
+    border-radius: 15px; /* Ajusta el radio de borde para redondear los bordes */
+}
+
+/* Estilos para el carrusel de imágenes */
+.carousel {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel img {
+    width: 100%; /* Ajusta el ancho según sea necesario para mostrar solo una imagen a la vez */
+    height: auto; /* Mantiene la proporción de aspecto original */
+}
+
+/* Estilos para los enlaces del menú de navegación */
+nav ul li a {
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    color: white; /* Color del texto */
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease; /* Agrega una transición suave al color del texto */
+}
+
+/* Cambia el color del texto al pasar el ratón por encima */
+nav ul li a:hover {
+    color: lightblue;
+}
+
+/* Estilos para los enlaces en el pie de página */
+.informacion a {
+    text-decoration: none;
+    color: white;
+    margin-right: 20px; /* Ajusta el espacio entre los enlaces */
+}
+
+/* Cambia el color del texto al pasar el ratón por encima en el pie de página */
+.informacion a:hover {
+    color: white;
+}
+
+/* Agrega estilos específicos para los enlaces "Quiénes Somos", "Políticas de Reembolso" e "Impacto Ambiental" */
+.quienes-somos a,
+.politicas a,
+.impacto-ambiental a, .metodos-pago a {
+    font-weight: bold; /* Texto en negrita */
+    font-style: italic; /* Texto en cursiva */
+    text-align: right;
+}
+
+/* Cambia el color del texto al pasar el ratón por encima para los enlaces específicos */
+.quienes-somos a:hover,
+.politicas a:hover,
+.impacto-ambiental a:hover {
+    color: white;
+}
+
+/* Estilos para el menú de navegación */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Estilos para el menú desplegable */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropbtn {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Ícono de flecha hacia abajo */
+.dropdown .arrow-down {
+    margin-right: 5px; 
+}
+
+.arrow-down {
+    margin-right: 5px; /* Ajusta el margen derecho según sea necesario */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Agrega estilos específicos para el icono del carrito */
+#carrito {
+    position: relative;
+    cursor: pointer;
+}
+
+#carrito img {
+    max-width: 30px; /* Ajusta el tamaño máximo del icono según sea necesario */
+    max-height: 30px; /* Ajusta el tamaño máximo del icono según sea necesario */
+}
+
+/* Estilos para el contador de productos en el carrito */
+
+#carrito::after {
+    content: '0'; /* Inicialmente, el contador muestra 0 productos */
+    position: absolute;
+    bottom: 0.3; /* Mueve el contador hacia la parte inferior */
+    left: -20px; /* Mueve el contador hacia la parte derecha */
+    background-color: #555;; /* Color del fondo del contador */
+    color: white; /* Color del texto del contador */
+    border-radius: 50%; /* Hace que el contador sea circular */
+    padding: 5px; /* Ajusta el relleno del contador según sea necesario */
+    font-size: 12px; /* Ajusta el tamaño de fuente del contador según sea necesario */
+}
+
+/* Estilos generales (mismo que el original) */
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.producto {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+/* Estilos para la ventana emergente del carrito */
+.carrito-contenedor {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#carritoIcono img {
+    width: 30px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+#carritoIcono {
+    cursor: pointer;
+}
+
+/* Estilos para los productos */
+.producto {
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.producto:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.producto .info-producto {
+    padding: 15px;
+}
+
+.producto h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.producto p {
+    font-size: 14px;
+}
+
+.producto button {
+    border: none;
+    background-color: black;
+    color: #fff;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+    background-color: lightslategray;
+}
+
+/* Estilos para la ventana emergente del carrito */
+.carrito-contenedor {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#carritoIcono img {
+    width: 30px;
+    height: auto;
+}
+
+#carritoIcono {
+    cursor: pointer;
+}
+
+/* Estilos para la ventana emergente del carrito */
+.carrito-contenedor {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#cerrarCarritoBtn,
+/* Estilos para el botón "Eliminar" en el carrito */
+.eliminar-producto {
+    background-color: black; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 5px 10px; /* Ajusta el relleno según sea necesario */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Añade bordes redondeados al botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+    margin-left: 5px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+.eliminar-producto:hover {
+    background-color: lightslategray; /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+/* Estilos para el contenedor de productos */
+.productos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+/* Estilos para cada producto */
+.producto {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    margin: 20px;
+    box-sizing: border-box;
+    margin: 10px 5px; 
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+
+#pagarAhoraBtn {
+    background-color: black; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 15px; /* Ajusta el relleno según sea necesario */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Añade bordes redondeados al botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+
+#pagarAhoraBtn:hover {
+    background-color: lightslategray; /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+/* Estilos para el botón "Cerrar carrito" en la ventana emergente del carrito */
+#cerrarCarritoBtn,
+#pagarAhoraBtn {
+    background-color: black; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    padding: 10px 15px; /* Ajusta el relleno según sea necesario */
+    border: none; /* Elimina el borde del botón */
+    border-radius: 5px; /* Añade bordes redondeados al botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima del botón */
+    margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+    transition: background-color 0.3s ease;
+}
+
+#cerrarCarritoBtn:hover,
+#pagarAhoraBtn:hover {
+    background-color: lightslategray; /* Cambia el color de fondo al pasar el ratón por encima */
+}
+
+/* Otros estilos para la ventana emergente del carrito */
+.carrito-contenedor {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#carritoIcono img {
+    width: 30px;
+    height: auto;
+}
+
+#carritoIcono {
+    cursor: pointer;
+}
+/* Estilos para el formulario de registro de usuario */
+.registro-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 100%;
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+    margin-top: 20px; /* Espaciado superior */
+    margin-bottom: 40px; /* Nuevo margen inferior para separar del pie de página */
+}
+
+/* Estilos para los campos del formulario */
+.registro-container input {
+    width: calc(100% - 20px); /* Ajusta el ancho del campo de entrada y considera el margen */
+    padding: 10px;
+    margin-bottom: 10px; /* Reducido el margen inferior */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilos para el botón de registro */
+.registro-container button {
+    background-color: black;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registro-container button:hover {
+    background-color: lightslategray;
+}
